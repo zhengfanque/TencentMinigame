@@ -16,8 +16,17 @@ namespace UnityStandardAssets._2D
         {
             if (other.tag == "Player")
             {
-                player.transform.position = GetNewestCheckPoint();
-               // SceneManager.LoadScene(SceneManager.GetSceneAt(0).name);
+                if (gameObject.name == "KillzoneWater")
+                {
+
+                    PlayerController.DeadType = 2;
+                }
+                else {
+
+                    PlayerController.DeadType = 1;
+                }
+                
+              //  player.transform.position = GetNewestCheckPoint();
             }
         }
 
@@ -47,6 +56,22 @@ namespace UnityStandardAssets._2D
                         if (player.transform.position.x > 224)
                         {
                             pos = GameObject.Find("/CheckPoints/CP1-5").transform.position;
+                        }
+                        if (player.transform.position.x > 277)
+                        {
+                            pos = GameObject.Find("/CheckPoints/CP1-6").transform.position;
+                        }
+                        if (player.transform.position.x > 322)
+                        {
+                            pos = GameObject.Find("/CheckPoints/CP1-7").transform.position;
+                        }
+                        if (player.transform.position.x > 415)
+                        {
+                            pos = GameObject.Find("/CheckPoints/CP1-8").transform.position;
+                        }
+                        if (player.transform.position.x > 462)
+                        {
+                            pos = GameObject.Find("/CheckPoints/CP1-9").transform.position;
                         }
                         break;
                     }    
